@@ -114,7 +114,8 @@ public class NetherSkyboxes {
     }
 
     public static class CustomSkyboxRenderer {
-        private static final ResourceLocation CUSTOM_SKY = new ResourceLocation(NetherSkyboxes.MODID, "textures/environment/nether_sky.png");
+        private static final ResourceLocation NETHER_SKY = new ResourceLocation(NetherSkyboxes.MODID, "textures/environment/nether_sky.png");
+        private static final ResourceLocation AETHER_SKY = new ResourceLocation(NetherSkyboxes.MODID, "textures/environment/aether_sky.png");
 
         @SubscribeEvent
         public void onFogColors(ViewportEvent.ComputeFogColor event) {
@@ -189,8 +190,8 @@ public class NetherSkyboxes {
             RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, Config.NETHER_SKYBOX_OPACITY.get().floatValue());
 
             TextureManager textureManager = Minecraft.getInstance().getTextureManager();
-            textureManager.bindForSetup(CUSTOM_SKY);
-            RenderSystem.setShaderTexture(0, CUSTOM_SKY);
+            textureManager.bindForSetup(NETHER_SKY);
+            RenderSystem.setShaderTexture(0, NETHER_SKY);
             RenderSystem.setShader(GameRenderer::getPositionTexShader);
 
             Tesselator tessellator = Tesselator.getInstance();
@@ -245,8 +246,8 @@ public class NetherSkyboxes {
             RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, Config.AETHER_SKYBOX_OPACITY.get().floatValue());
 
             TextureManager textureManager = Minecraft.getInstance().getTextureManager();
-            textureManager.bindForSetup(CUSTOM_SKY);
-            RenderSystem.setShaderTexture(0, CUSTOM_SKY);
+            textureManager.bindForSetup(AETHER_SKY);
+            RenderSystem.setShaderTexture(0, AETHER_SKY);
             RenderSystem.setShader(GameRenderer::getPositionTexShader);
 
             Tesselator tessellator = Tesselator.getInstance();
