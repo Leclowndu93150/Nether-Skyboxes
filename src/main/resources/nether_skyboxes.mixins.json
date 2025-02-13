@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "nether_skyboxes.refmap.json",
   "mixins": [
+    "DimensionClientListenerMixin"
   ],
   "client": [
     "AetherSkyRenderEffectsMixin"

@@ -145,6 +145,7 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
     implementation fg.deobf("curse.maven:aether-255308:6134920")
+    implementation fg.deobf("curse.maven:config-menus-forge-544048:4672356")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
